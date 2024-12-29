@@ -1,0 +1,363 @@
+[
+    {
+        "CategoryName": "Cake",
+        "name": "Vanilla Cake",
+        "img": "https://imgcdn.floweraura.com/eggless-anniversary-vanilla-cake-9913230ca-AA.jpg",
+        "options": [
+            {
+                "half": "130",
+                "full": "220"
+            }
+        ],
+        "description": "A sweet baked food made from a dough or thick batter usually containing flour and sugar and often shortening, eggs, and a raising agent."
+    },
+    {
+        "CategoryName": "Cake",
+        "name": "Chocolate Cake",
+        "img": "https://www.fnp.com/images/pr/l/v20221205202809/chocolate-rose-designer-cake-half-kg-eggless_1.jpg",
+        "options": [
+            {
+                "half": "110",
+                "full": "200"
+            }
+        ],
+        "description": "A sweet baked food made from a dough or thick batter usually containing flour and sugar and often shortening, eggs, and a raising agent ."
+    },
+    {
+        "CategoryName": "Cake",
+        "name": "Coffee Cake",
+        "img": "https://mrbrownbakery.com/image/images/n2dbRlCxa2XEa4GHUj4g1mrGxQ0jmlufaHuZudrM.jpeg?p=large",
+        "options": [
+            {
+                "half": "200",
+                "full": "320"
+            }
+        ],
+        "description": "A sweet baked food made from a dough or thick batter usually containing flour and sugar and often shortening, eggs, and a raising agent ."
+    },
+    {
+        "CategoryName": "Cake",
+        "name": "Strawberry Cake",
+        "img": "https://www.mybakingaddiction.com/wp-content/uploads/2023/06/chocolate-strawberry-cake-on-stand-hero-378x378.jpg",
+        "options": [
+            {
+                "half": "170",
+                "full": "300"
+            }
+        ],
+        "description": "a sweet baked food made from a dough or thick batter usually containing flour and sugar and often shortening, eggs, and a raising agent ."
+    },
+    {
+        "CategoryName": "Cake",
+        "name": "Pinapple Cake",
+        "img": "https://assets.winni.in/product/primary/2023/6/85584.jpeg?dpr=1&w=500",
+        "options": [
+            {
+                "half": "150",
+                "full": "260"
+            }
+        ],
+        "description": "A sweet baked food made from a dough or thick batter usually containing flour and sugar and often shortening, eggs, and a raising agent ."
+    },
+    {
+        "CategoryName": "Cake",
+        "name": "Mango Cake",
+        "img": "https://abicake.com/cdn/shop/files/Mango-Cake.png?v=1701886572",
+        "options": [
+            {
+                "half": "120",
+                "full": "220"
+            }
+        ],
+        "description": "A sweet baked food made from a dough or thick batter usually containing flour and sugar and often shortening, eggs, and a raising agent ."
+    },
+    {
+        "CategoryName": "Macaron",
+        "name": "Belgian Chocolate",
+        "img": "https://sugargeekshow.com/wp-content/uploads/2019/12/chocolate-macaron-recipe.jpg",
+        "options": [
+            {
+                "six": "120",
+                "dozen": "200"
+            }
+        ],
+        "description": "A meringue-based sandwich cookie made with almond flour, egg whites, confectioners' sugar, and food coloring."
+    },
+    {
+        "CategoryName": "Macaron",
+        "name": "Raspberry",
+        "img": "https://b2430029.smushcdn.com/2430029/wp-content/uploads/2022/02/8CF1BB5E-B75B-4801-887E-FA8E77B5C5D4.jpg?size=960x639&lossy=1&strip=1&webp=1",
+        "options": [
+            {
+                "six": "150",
+                "dozen": "260"
+            }
+        ],
+        "description": "A meringue-based sandwich cookie made with almond flour, egg whites, confectioners' sugar, and food coloring."
+    },
+    {
+        "CategoryName": "Macaron",
+        "name": "Salted Caramel",
+        "img": "https://www.barleyandsage.com/wp-content/uploads/2023/06/salted-caramel-macarons-1999.jpg",
+        "options": [
+            {
+                "six": "170",
+                "dozen": "300"
+            }
+        ],
+        "description": "A meringue-based sandwich cookie made with almond flour, egg whites, confectioners' sugar, and food coloring."
+    },
+    {
+        "CategoryName": "Macaron",
+        "name": "Coconut",
+        "img": "https://theobroma.in/cdn/shop/files/HIGHRESCoconutMacaroons02-Square.jpg?v=1711188230",
+        "options": [
+            {
+                "six": "170",
+                "dozen": "250"
+            }
+        ],
+        "description": "A meringue-based sandwich cookie made with almond flour, egg whites, confectioners' sugar, and food coloring."
+    },
+    {
+        "CategoryName": "Macaron",
+        "name": "Creme Brulee",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2021/04/Cream-brule-macaron-4055691-1365x2048.jpg",
+        "options": [
+            {
+                "six": "120",
+                "dozen": "230"
+            }
+        ],
+        "description": "A meringue-based sandwich cookie made with almond flour, egg whites, confectioners' sugar, and food coloring."
+    },
+    {
+        "CategoryName": "Macaron",
+        "name": "Black Current",
+        "img": "https://jackandbeyond.com/cdn/shop/products/blackcurrant-macarons-box-of-12-885408_600x.jpg?v=1707225858",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A meringue-based sandwich cookie made with almond flour, egg whites, confectioners' sugar, and food coloring."
+    },
+    {
+        "CategoryName": "Pastry",
+        "name": "Biscoff Cheesecake Pastry",
+        "img": "https://cheesecakedelights.in/wp-content/uploads/2018/11/Order-Lotus-Biscoff-Cheesecakes-in-Pune-IMG_20210228_153850_729-300x300.jpg",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "Stiff dough made from flour, salt, a relatively high proportion of fat, and a small proportion of liquid."
+    },
+    {
+        "CategoryName": "Pastry",
+        "name": "Strawberry Tiramisu",
+        "img": "https://www.foodandwine.com/thmb/4B6dnxAaOOiy_L8Ys94WNdwfAJQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/strawberry-tiramisu-FT-RECIPE0321-4148336bab854769a1a4af51cf39358f.jpg",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "Stiff dough made from flour, salt, a relatively high proportion of fat, and a small proportion of liquid."
+    },
+    {
+        "CategoryName": "Pastry",
+        "name": "Dutch Truffle",
+        "img": "https://theobroma.in/cdn/shop/files/DutchTrufflePastry.jpg?v=1711107855",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of Paneer/Chicken/Mutton were added."
+    },
+    {
+        "CategoryName": "Pastry",
+        "name": "Chocoholic",
+        "img": "https://theobroma.in/cdn/shop/files/ChocoholicPastry.jpg?v=1711096267",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "Stiff dough made from flour, salt, a relatively high proportion of fat, and a small proportion of liquid."
+    },
+    {
+        "CategoryName": "Pastry",
+        "name": "Dark Chocolate Mousse",
+        "img": "https://theobroma.in/cdn/shop/files/DarkChocolateMoussePastry-Square_4ad7e9e0-ff6c-4817-80a0-7df822cc871c_400x400.jpg?v=1713772848",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "Stiff dough made from flour, salt, a relatively high proportion of fat, and a small proportion of liquid."
+    },
+    {
+        "CategoryName": "Pastry",
+        "name": "Hazelnut Mousse",
+        "img": "https://theobroma.in/cdn/shop/files/HazelnutPralineMoussePastry_400x400.jpg?v=1711096565",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "Stiff dough made from flour, salt, a relatively high proportion of fat, and a small proportion of liquid."
+    },
+    {
+        "CategoryName": "Muffin",
+        "name": "Chocolate Chip",
+        "img": "https://sugarspunrun.com/wp-content/uploads/2022/03/Chocolate-Chip-Muffins-5-of-7.jpg",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A quick bread made of batter containing egg and baked in a pan having cuplike molds."
+    },
+    {
+        "CategoryName": "Muffin",
+        "name": "Vanilla",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2023/07/Vanilla-Muffins-07968-768x768.jpg",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A quick bread made of batter containing egg and baked in a pan having cuplike molds."
+    },
+    {
+        "CategoryName": "Muffin",
+        "name": "Brownie",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2022/11/Brownie-muffins-04684-360x360.jpg",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A quick bread made of batter containing egg and baked in a pan having cuplike molds."
+    },
+    {
+        "CategoryName": "Muffin",
+        "name": "Mini Banana",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2022/12/Mini-banana-muffins-04986-360x360.jpg",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A quick bread made of batter containing egg and baked in a pan having cuplike molds."
+    },
+    {
+        "CategoryName": "Muffin",
+        "name": "Strawberry",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2023/07/strawberry-Muffins-08143-360x360.jpg",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A quick bread made of batter containing egg and baked in a pan having cuplike molds."
+    },
+    {
+        "CategoryName": "Muffin",
+        "name": "Raspberry",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2023/07/Raspberry-Muffins-08157-360x360.jpg",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A quick bread made of batter containing egg and baked in a pan having cuplike molds."
+    },
+    {
+        "CategoryName": "Donut",
+        "name": "Sugar Donut",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2023/08/Sugar-donuts-08719-768x768.jpg",
+        "options": [
+            {
+                "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A kind of ring-shaped snack food popular in many countries, which are usually deep fried from flour doughs."
+    },
+    {
+        "CategoryName": "Donut",
+        "name": "Mouchi Donut",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2022/01/Mochi-donuts-1283516-360x360.jpg",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A kind of ring-shaped snack food popular in many countries, which are usually deep fried from flour doughs."
+    },
+    {
+        "CategoryName": "Donut",
+        "name": "Chocolate Donut",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2022/04/baked-chocolate-donuts-00134.1.1-360x360.jpg",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A kind of ring-shaped snack food popular in many countries, which are usually deep fried from flour doughs."
+    },
+    {
+        "CategoryName": "Donut",
+        "name": "Cream Donut",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2023/08/Bavarian-cream-donuts-08435-360x360.jpg",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A kind of ring-shaped snack food popular in many countries, which are usually deep fried from flour doughs."
+    },
+
+    {
+        "CategoryName": "Donut",
+        "name": "Raspberry Donut",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2022/01/Baked-raspberry-donut-3-360x360.jpg",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A kind of ring-shaped snack food popular in many countries, which are usually deep fried from flour doughs."
+    },
+    {
+        "CategoryName": "Donut",
+        "name": "Maple Donut",
+        "img": "https://www.spatuladesserts.com/wp-content/uploads/2023/11/Maple-Glaze-donuts-09472-360x360.jpg",
+        "options": [
+            {
+                 "six": "100",
+                "dozen": "200"
+            }
+        ],
+        "description": "A kind of ring-shaped snack food popular in many countries, which are usually deep fried from flour doughs."
+    }
+]

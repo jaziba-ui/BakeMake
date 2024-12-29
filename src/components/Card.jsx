@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatchCart, useCart } from './ContextReducer'
 
-export default function Card(props) {
+export default function Card(props) {//comment
 
   const priceRef = useRef();
   let dispatch = useDispatchCart()

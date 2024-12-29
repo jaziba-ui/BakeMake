@@ -6,8 +6,7 @@ export default function SignUp() {
 
   const [credentials, setCredentials] = useState({
     name: "", email: "", password: "", geolocation: ""
-  })//commet2
-
+  })//omment3
   const Navigate = useNavigate();
 
   const handleSubmit = async (err) => {

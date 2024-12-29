@@ -6,7 +6,7 @@ export default function SignUp() {
 
   const [credentials, setCredentials] = useState({
     name: "", email: "", password: "", geolocation: ""
-  })
+  })//commet2
 
   const Navigate = useNavigate();
 

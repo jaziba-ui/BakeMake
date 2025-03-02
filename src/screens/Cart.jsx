@@ -1,11 +1,93 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatchCart, useCart } from "../components/ContextReducer.jsx";
 import { remove } from "../assests";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
 
 export default function Cart() {
   let data = useCart();
-  
-  let dispatch = useDispatchCart();
+  const dispatch = useDispatchCart();
+
+  useEffect(() => {
+    // Save cart data to localStorage whenever it changes
+    localStorage.setItem("cartData", JSON.stringify(data));
+  }, [data]);
+
+  const makePayment = async () => {
+    try {
+      const stripe = await loadStripe(
+        "pk_test_51QbYsoP7w8CuCu1Y0p3eUoKRaKGDJKTtPaKzgSzHSUq7a7gRgXNdCNSMZbtYGdo7at4nqWRPqi55UBUvcfiHLS1300Cyt6CvV8"
+      );
+      const totalPrice = data.reduce((total, food) => total + food.price, 0);
+      const token = localStorage.getItem("authToken");
+
+      const body = { products: data, totalAmount: totalPrice };
+
+      const response = await fetch(
+        "http://localhost:5000/api/create-checkout-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(body),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to create checkout session");
+      }
+
+      const session = await response.json();
+      const result = await stripe.redirectToCheckout({
+        sessionId: session.id,
+      });
+
+      if (result.error) {
+        console.error("Stripe Checkout Error:", result.error.message);
+      } else {
+        // Once payment is successful, store the order in the backend
+        const userEmail = localStorage.getItem("userEmail");
+        if (!userEmail) {
+          console.log("No user email found in localStorage.");
+          return;
+        }
+
+        const orderData = {
+          order_data: data,
+          email: userEmail,
+          order_date: new Date().toDateString(),
+        };
+
+        // Send order data to backend after successful payment
+        const orderResponse = await fetch(
+          "http://localhost:5000/api/orderData",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(orderData),
+          }
+        );
+
+        if (orderResponse.ok) {
+          console.log("Order saved successfully");
+        } else {
+          console.log("Failed to save order");
+        }
+
+        // Clear cart after successful order
+        dispatch({
+          type: "DROP",
+        });
+      }
+    } catch (error) {
+      console.error("Error in makePayment:", error.message);
+    }
+  };
+
   if (data.length === 0) {
     return (
       <div>
@@ -19,33 +101,9 @@ export default function Cart() {
       </div>
     );
   }
-  const handleCheckOut = async () => {
-    let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("http://localhost:5000/api/orderData", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        order_data: data,
-        email: userEmail,
-        order_date: new Date().toDateString(),
-      }),
-    });
-    // console.log(data);
-    // {console.log("response", response)}
-    const json = await response.json();
-    // console.log(json);
-    if (json.success) {
-        // {console.log(userEmail)}
-        // {console.log(data)}
-      dispatch({
-        type: "DROP",
-      });
-    }
-  };
 
   let totalPrice = data.reduce((total, food) => total + food.price, 0);
+
   return (
     <div>
       <div
@@ -57,16 +115,15 @@ export default function Cart() {
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
-              <th scope="col">Qunatity</th>
+              <th scope="col">Quantity</th>
               <th scope="col">Option</th>
               <th scope="col">Amount</th>
               <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
-          
             {data.map((food, index) => (
-              <tr>
+              <tr key={index}>
                 <th scope="row">{index + 1}</th>
                 <td>{food.name}</td>
                 <td>{food.qty}</td>
@@ -88,7 +145,7 @@ export default function Cart() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-trash"
+                      className="bi bi-trash"
                       viewBox="0 0 16 16"
                     >
                       <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
@@ -101,10 +158,9 @@ export default function Cart() {
           </tbody>
         </table>
         <div>
-        {/* console.log(data); */}
           <h1 className="fs-2">Total Price: {totalPrice}/-</h1>
         </div>
-        <button className="btn bg-warning mt-5 mb-5" onClick={handleCheckOut} >
+        <button className="btn bg-warning mt-5 mb-5" onClick={makePayment}>
           Check Out
         </button>
       </div>

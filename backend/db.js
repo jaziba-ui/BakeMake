@@ -4,7 +4,9 @@ const mongoURI = 'mongodb+srv://BakeMake:BakeMake123@cluster0.t2jp1fl.mongodb.ne
 
 const mongoDB = async () => {
   await mongoose.connect(mongoURI,{
-    useNewURLParser : true 
+    useNewURLParser : true ,
+    useUnifiedTopology: true,
+    writeConcern: { w: "majority", j: true, wtimeout: 5000 }
 }, async (error,result) => {
     if(error) {
     console.log("SOME PROBLEM",error)

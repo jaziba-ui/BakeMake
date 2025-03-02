@@ -1,17 +1,22 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
+const User = require("./User"); // Import the User model
 
-const {Schema} = mongoose;
-
-const OrderSchema = new Schema({
-    email : {
-        type : String,
-        required : true,
-        unique : true
+const orderSchema = new mongoose.Schema({
+  email: { type: String, required: true },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  orderData: [
+    {
+      name: String,
+      qty: Number,
+      price: Number,
     },
-    order_data : {
-        type : Array,
-        required : true,
-    }
-})
+  ],
+  status: {
+    type: String,
+    // enum: ["waiting", "completed"],
+    default: "waiting",
+  },
+});
 
-module.exports = mongoose.model('order', OrderSchema)
+const Order = mongoose.model("Order", orderSchema);
+module.exports = Order;

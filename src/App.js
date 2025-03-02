@@ -1,4 +1,3 @@
-
 import './App.css';
 import Home from './screens/Home';
 import {
@@ -15,6 +14,11 @@ import SignUp from './screens/SignUp.jsx';
 // import { CartProvider } from './components/ContextReducer.jsx';
 import { CartProvider } from './components/ContextReducer.jsx'
 import Order from './screens/Order.jsx';
+import Success from './screens/Success.jsx';
+import Cancel from './screens/Cancel.jsx';
+import AdminOrders from './components/AdminOrders.jsx';
+import AdminDash from './components/AdminDash.jsx';
+
 
 function App() {
   return (
@@ -24,8 +28,12 @@ function App() {
       <Routes>
         <Route exact path = '/' element={<Home/>} />
         <Route exact path = '/login' element={<Login/>} />
-        <Route exact path = '/createuser' element={<SignUp/>} />
+        <Route exact path = '/create' element={<SignUp/>} />
         <Route exact path = '/myOrderData' element={<Order/>} />
+        <Route exact path = '/success' element={<Success/>} />
+        <Route exact path = '/cancel' element={<Cancel/>} />
+        <Route path="/admin/orders" element={<AdminOrders />} />
+        <Route exact path="/admin-dash" element={<AdminDash/>} />
       </Routes>
     </div>
     </Router>

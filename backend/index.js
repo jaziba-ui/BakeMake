@@ -1,28 +1,58 @@
-const express = require('express')
-const app = express()
-const port = 5000
+const express = require("express");
+const http = require("http");
+const cors = require("cors");
+require("dotenv").config();
+const mongoDB = require("./db");
+const { initializeSocket } = require("./socket");
+const app = express();
+const server = http.createServer(app);
+// const io = require('socket.io')(server);
 
-const mongoDB = require("./db")
-mongoDB();
+process.on("uncaughtException", (err) => {
+  console.error("🔥 Uncaught Exception:", err);
+});
 
-app.use((req,res,next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000")
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  )
-  next();
-})
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("🔥 Unhandled Rejection:", reason);
+});
 
-app.use(express.json())
-app.use('/api',require('./Routes/CreateUser'))
-app.use('/api',require('./Routes/DisplayData'))
-app.use('/api',require('./Routes/OrderData'))
-app.get('/',(req,res) => {
-  res.send("YOOOOOOO")
-})
+// Whenever a new order is created, emit the 'newOrder' event
+app.post('/create-order', (req, res) => {
+  console.log("New order request:", req.body);
+  const newOrder = createOrder(req.body);
+  getIo().emit('newOrder', newOrder);  
+  console.log('Emitting newOrder:', newOrder);
+  res.status(200).json(newOrder);
+});
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+// Initialize the app and HTTP server
+
+// MongoDB connection
+mongoDB().catch((err) => {
+  console.error("MongoDB connection error:", err);
+});
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use("/api", require("./Routes/CreateUser"));
+app.use("/api", require("./Routes/DisplayData"));
+app.use("/api", require("./Routes/OrderData"));
+app.use("/api", require("./Routes/adminOrder"));
+app.use("/api", require("./Routes/socketRoute"));
+
+
+// Start the server
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+  console.log("Socket server is up and running!");
+  initializeSocket(server);
+});
+
+
+// Export the server and io instance
+module.exports =  {server} ;

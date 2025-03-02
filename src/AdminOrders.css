@@ -1,0 +1,42 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 3-4 columns depending on screen size */
+    gap: 20px;
+  }
+  
+  .product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  
+  .product-item img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .order-card {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
